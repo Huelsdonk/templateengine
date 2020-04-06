@@ -18,8 +18,7 @@ const render = employees => {
     .filter(employee => employee.getRole() === "Intern")
     .map(intern => renderIntern(intern))
   );
-
-  return renderMain(html.join(""));
+  return renderMain(html.join(''));
 
 };
 
@@ -59,7 +58,7 @@ const renderMain = html => {
 };
 
 const replacePlaceholders = (template, placeholder, value) => {
-  const pattern = new RegExp("{{ " + placeholder + " }}", "gm");
+  const pattern = new RegExp(`{{ ${placeholder} }}`, "gm");
   return template.replace(pattern, value);
 };
 

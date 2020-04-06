@@ -1,0 +1,14 @@
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background: linear-gradient(to right, aliceblue, #3f5eab, lightblue);
+}
+
+.jumbotron {
+    background: linear-gradient(to bottom, #113961a3, rgba(123, 235, 228, 0.262), rgba(64, 218, 203, 0.077));
+    box-shadow: 5px 1px 1px 1px rgba(0, 0, 0, 0.379); 
+}
+
+.card-header {
+    background: linear-gradient(to bottom, #113961a3, rgba(123, 235, 228, 0.262));
+    
+}

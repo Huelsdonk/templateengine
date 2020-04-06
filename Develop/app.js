@@ -27,12 +27,25 @@ const questions = [
     {
         type: 'input',
         name: 'employeeID',
-        message: "What is the employee's ID?"
+        message: "What is the employee's ID?",
+        validate: function(value) {
+            if (/\d/.test(value)) {
+            return true;
+            }
+            return "Please enter a number"
+        }
     },
     {
         type: 'input',
         name: 'employeeEmail',
-        message: "What is the employee's email address?"
+        message: "What is the employee's email address?",
+        validate: function(value) {
+            // definitely not a super thorough validation
+            if (/^\S+@\S+$/.test(value)) {
+                return true
+            }
+            return "Please enter a valid email address"
+        }
     },
     {
         type: 'input',
@@ -55,6 +68,12 @@ const questions = [
         type: 'input',
         name: 'officeNumber',
         message: "What is the manager's office number?",
+        validate: function(value) {
+            if (/\d/.test(value)) {
+            return true;
+            }
+            return "Please enter a number"
+        },
         when: function (answers) {
             return answers.employeeType === "Manager"
         }
